@@ -1,1 +1,5 @@
-print("hello world!")
+def function():
+        print("a")
+
+
+function()
