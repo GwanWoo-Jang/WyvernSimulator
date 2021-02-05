@@ -16,14 +16,11 @@ def caculate_gauge(list_speed, list_gauge):
         result.append((100 - list_gauge[i])/list_speed[i])
     min_result = min(result)
     for i in range(len(result)):
-        if min_result == result[i]:
-            result[i] = 100
-        else :
-            result[i] = result[i] + ((min_result/result[i]) * 100 )
+        result[i] =list_gauge[i]+ (100-list_gauge[i])* ((min_result/result[i]))
     return result
 
 
-def fight(my_unit1,my_unit2 ,enermy_unit):
+def fight(my_unit1, my_unit2 ,enermy_unit):
     turn = 0
     temp1 = start_speed_unit(my_unit1)
     temp2 = start_speed_unit(my_unit2)
